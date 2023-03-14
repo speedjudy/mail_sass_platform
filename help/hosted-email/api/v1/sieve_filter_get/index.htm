@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Pavin Joseph"><link rel="canonical" href="index.htm">
+      <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Get filters - Mailbux API Docs</title>
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/theme_extra.css">
+        <link rel="stylesheet" href="../../../../../ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Get filters";
+        var mkdocs_page_input_path = "sieve_filter_get.md";
+        var mkdocs_page_url = "/help/hosted-email/api/v1/sieve_filter_get/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer=""></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="../../../../../ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.htm" class="icon icon-home"> Mailbux API Docs
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.htm">Get started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth_post/index.htm">Obtain authorization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth_get/index.htm">Get authorization details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth_delete/index.htm">Revoke authorization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Two-factor authentication (2FA)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_post/index.htm">Enable 2FA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_verify_post/index.htm">Verify & activate 2FA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_get/index.htm">Get 2FA status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_delete/index.htm">Disable 2FA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_devicepwd_post/index.htm">Create device password</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_devicepwd_get/index.htm">Get device passwords</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../twofa_devicepwd_delete/index.htm">Delete device password</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Account recovery</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../password_recovery_post/index.htm">Initiate recovery</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../password_reset_post/index.htm">Reset password</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Accounts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../accounts_post/index.htm">Create account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../accounts_get/index.htm">Get all accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../account_get/index.htm">Get an account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../account_delete/index.htm">Delete an account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../account_patch/index.htm">Update an account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../account_da_cascade_patch/index.htm">DomainAdmin cascade enable / disable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../account_da_cascade_delete/index.htm">DomainAdmin cascade delete</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Domains</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_post/index.htm">Create domain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_get/index.htm">Get all domains</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_delete/index.htm">Delete domain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_sdr_post/index.htm">Enable SDR</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_sdr_get/index.htm">Get SDR status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_sdr_delete/index.htm">Disable SDR</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_dkim_post/index.htm">Enable DKIM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_dkim_get/index.htm">Get DKIM status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domains_dkim_delete/index.htm">Disable DKIM</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Domain aliases</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../domainalias_post/index.htm">Create domain alias</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domainalias_get/index.htm">Get all domain aliases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../domainalias_delete/index.htm">Delete domain alias</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Relay domains</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../relaydomain_post/index.htm">Create relay domain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../relaydomain_get/index.htm">Get all relay domains</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../relaydomain_delete/index.htm">Delete relay domain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Aliases</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../aliases_post/index.htm">Create alias</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../aliases_get/index.htm">Get all aliases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../aliases_put/index.htm">Update alias</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../aliases_delete/index.htm">Delete alias</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sender addresses</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../sa_post/index.htm">Create sender address</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sa_get/index.htm">Get all sender addresses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sa_put/index.htm">Update sender address</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sa_delete/index.htm">Delete sender address</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global antispam thresholds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_antispam_thresh_get/index.htm">Get thresholds</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_antispam_thresh_put/index.htm">Update thresholds</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Per-domain antispam thresholds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_antispam_thresh_post/index.htm">Create thresholds</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_antispam_thresh_get/index.htm">Get thresholds</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_antispam_thresh_put/index.htm">Update thresholds</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_antispam_thresh_delete/index.htm">Delete thresholds</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Global whitelist & blacklist rules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_wlbl_post/index.htm">Create whitelist / blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_wlbl_get/index.htm">Get whitelist & blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_wlbl_put/index.htm">Update whitelist / blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../global_wlbl_delete/index.htm">Delete whitelist / blacklist</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Per-domain whitelist & blacklist rules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_wlbl_post/index.htm">Create whitelist / blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_wlbl_get/index.htm">Get whitelist & blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_wlbl_put/index.htm">Update whitelist / blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../perdomain_wlbl_delete/index.htm">Delete whitelist / blacklist</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Auto migration setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_setup_post/index.htm">Create auto migration for domain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_setup_get/index.htm">Get auto migration details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_setup_delete/index.htm">Delete auto migration for domain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Auto migration users</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_user_post/index.htm">Create auto migration for user</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_user_get/index.htm">Get auto migration users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_user_delete/index.htm">Delete auto migration for user</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Auto migration resync</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_resync_domain_post/index.htm">Resync domain</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../am_resync_user_post/index.htm">Resync user</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contacts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts_post/index.htm">Create addressbook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts_get/index.htm">Get addressbooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts_delete/index.htm">Delete addressbook</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contacts sharing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../conshare_post/index.htm">Create share</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../conshare_get/index.htm">Get shares</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../conshare_put/index.htm">Update share</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../conshare_delete/index.htm">Delete share</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Calendars</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendars_post/index.htm">Create calendar</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendars_get/index.htm">Get calendars</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calendars_delete/index.htm">Delete calendar</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Calendar sharing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../calshare_post/index.htm">Create share</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calshare_get/index.htm">Get shares</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calshare_put/index.htm">Update share</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../calshare_delete/index.htm">Delete share</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sieve filtering</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../sieve_filter_post/index.htm">Create filter</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="index.htm">Get filters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#response-parameters">Response parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-request-python">Example request (Python)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-response-json">Example response (JSON)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sieve_filter_put/index.htm">Update filter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sieve_filter_delete/index.htm">Delete filter</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Vacation autoresponder</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vacation_autoreply_post/index.htm">Create autoreply</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vacation_autoreply_get/index.htm">Get autoreply</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vacation_autoreply_put/index.htm">Update autoreply</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vacation_autoreply_delete/index.htm">Delete autoreply</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Settings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setting_get/index.htm">Get setting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setting_post/index.htm">Update setting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setting_delete/index.htm">Reset setting</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Statistics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stats_mail_get/index.htm">Get mail stats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stats_quota_get/index.htm">Get quota usage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stats_blocked_senders_get/index.htm">Get blocked senders</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Server</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_logs_get/index.htm">Get logs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_load_get/index.htm">Get load</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_disk_usage_get/index.htm">Disk usage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_quota_reclac_post/index.htm">Recalculate quota</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_rebuild_index_post/index.htm">Rebuild index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../server_cache_clear_post/index.htm">Cache clear</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../export_radicale_post/index.htm">Export radicale</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../export_radicale_get/index.htm">Radicale export status</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api_log_get/index.htm">Get log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api_status_get/index.htm">Get status</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">System</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../system_version_get/index.htm">Version</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.htm">Mailbux API Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.htm" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Sieve filtering &raquo;</li>
+      <li>Get filters</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="get-filters">Get filters<a class="headerlink" href="#get-filters" title="Permanent link">&para;</a></h1>
+<p>Fetch all sieve (message) filters</p>
+<ul>
+<li>HTTP Method: <code>GET</code></li>
+<li>URL: <code>https://example.domain.tld/api/v1/sieve_filters/</code></li>
+<li>Require authentication: <code>Yes</code></li>
+<li>Permission level required: <code>MailUser</code></li>
+</ul>
+<h2 id="response-parameters">Response parameters<a class="headerlink" href="#response-parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sieve_filters</td>
+<td>list</td>
+<td>List of all sieve filters</td>
+</tr>
+<tr>
+<td>filter_position</td>
+<td>int</td>
+<td>Filter position from <code>1</code> to <code>99</code></td>
+</tr>
+<tr>
+<td>filter_name</td>
+<td>str</td>
+<td>Friendly name (identifier) of filter</td>
+</tr>
+<tr>
+<td>match_type</td>
+<td>str</td>
+<td><code>all_rules</code> / <code>any_rule</code> / <code>all_messages</code></td>
+</tr>
+<tr>
+<td>rules</td>
+<td>list</td>
+<td>List of rules to be matched</td>
+</tr>
+<tr>
+<td>search_property</td>
+<td>str</td>
+<td><code>Size</code> OR any header like <code>Subject</code> / <code>From</code> / <code>To</code> / <code>Cc</code> / <code>X-Spam</code></td>
+</tr>
+<tr>
+<td>search_type</td>
+<td>str</td>
+<td><code>contains</code> / <code>does_not_contain</code> / <code>is</code> / <code>is_not</code> OR <code>greater_than</code> / <code>less_than</code> for <code>search_property</code> : <code>Size</code></td>
+</tr>
+<tr>
+<td>search_term</td>
+<td>str/int</td>
+<td>Search term as string; integer (KB) for <code>search_property</code> : <code>Size</code></td>
+</tr>
+<tr>
+<td>actions</td>
+<td>list</td>
+<td>List of actions to be carried out</td>
+</tr>
+<tr>
+<td>perform_action</td>
+<td>str</td>
+<td><code>move</code> / <code>copy</code> / <code>keep</code> / <code>forward</code> / <code>keep_and_forward</code> / <code>reject</code> / <code>discard</code> / <code>stop</code></td>
+</tr>
+<tr>
+<td>action_arg</td>
+<td>str</td>
+<td>Action argument; mailbox folder name for <code>move</code> / <code>copy</code>, email address for <code>forward</code> / <code>keep_and_forward</code>, reject reason for <code>reject</code>, empty string for others</td>
+</tr>
+<tr>
+<td>status</td>
+<td>str</td>
+<td>Status</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-request-python">Example request (Python)<a class="headerlink" href="#example-request-python" title="Permanent link">&para;</a></h2>
+<pre><code class="language-python">import requests
+import json
+from pprint import pprint
+
+url = &quot;https://example.domain.tld/api/v1/sieve_filters/&quot;
+r = requests.get(url, auth=(&quot;u1@vonmail.com&quot;,&quot;long-auth_token-here&quot;))
+try:
+    pprint(r.json())
+except:
+    print(r.text)
+</code></pre>
+<h2 id="example-response-json">Example response (JSON)<a class="headerlink" href="#example-response-json" title="Permanent link">&para;</a></h2>
+<pre><code class="language-json">{'sieve_filters': [{'actions': [{'action_arg': 'This message seems like spam and '
+                                             'I refuse to accept it.',
+                               'perform_action': 'reject'}],
+                    'filter_name': 'My filter 1',
+                    'filter_position': 1,
+                    'match_type': 'any_rule',
+                    'rules': [{'search_property': 'Subject',
+                               'search_term': 'jackpot',
+                               'search_type': 'contains'}],
+                    'status': 'enabled'}]}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sieve_filter_post/index.htm" class="btn btn-neutral float-left" title="Create filter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sieve_filter_put/index.htm" class="btn btn-neutral float-right" title="Update filter">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>&copy; 2015 - <script>document.write(new Date().getFullYear())</script> Mailbux, Inc. <br> Permission is hereby granted to customers with an active subscription of Cloud/Dedicated plan to modify and redistribute the material without attribution.</p>
+  </div>
+
+  Go to → <a href="https://www.mailbux.com">Main website</a> | <a href="../index.htm">Documentation home</a>
+  <!--Go to → <a href="https://www.mailbux.com">Main website</a> | <a href="https://www.mailbux.com/help/">Documentation home</a>-->
+
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../sieve_filter_post/index.htm" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sieve_filter_put/index.htm" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer=""></script>
+    <script src="../js/theme.js" defer=""></script>
+      <script src="../search/main.js" defer=""></script>
+    <script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

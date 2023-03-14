@@ -1,0 +1,29 @@
+.bg-menu-theme {
+    background-color: #0D1220!important;
+    color: #C4C7CB;
+}
+
+.bg-menu-theme .menu-inner>.menu-item.active>.menu-link {
+    color: #FFFFFF;
+    background-color: #222635!important;
+}
+
+html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item.open>.menu-link, .layout-menu-hover.layout-menu-collapsed .bg-menu-theme .menu-inner .menu-item.open>.menu-link, html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-link:not(.active):hover, .layout-menu-hover.layout-menu-collapsed .bg-menu-theme .menu-inner .menu-item .menu-link:not(.active):hover {
+    background-color: #222635;
+    color: #FFFFFF;
+}
+
+.bg-menu-theme .menu-item.active>.menu-link:not(.menu-toggle) {
+    background-color: #222635;
+}
+
+.bg-menu-theme .menu-sub>.menu-item>.menu-link:before {
+    content: none;
+}
+
+.bg-menu-theme .menu-item.open:not(.menu-item-closing)>.menu-toggle, .bg-menu-theme .menu-item.active>.menu-link {
+    color: #FFFFFF;
+}
+.app-brand-logo {
+    filter: brightness(0) invert(1);
+}

@@ -1,0 +1,13 @@
+.icon-svg svg{
+    width: 40px;
+    height: 40px;
+    stroke: #fff;
+}
+
+.navbar-logo{
+    filter: brightness(0) invert(1);
+}
+
+.sticky .navbar-logo{
+    filter: none;
+}
